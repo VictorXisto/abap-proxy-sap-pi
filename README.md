@@ -1,5 +1,5 @@
-# abap-proxy-sap-pi
- Program Abap to visualize information and to send Rows to SAP with Abap Proxy
+# 📝 Documentação SAP ABAP PI
+ 
  
 [![GitHub issues](https://img.shields.io/github/issues/VictorXisto/abap-proxy-sap-pi?label=ABAP)](https://github.com/VictorXisto/abap-proxy-sap-pi/issues)
 [![GitHub forks](https://img.shields.io/github/forks/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/network)
@@ -7,7 +7,9 @@
 [![GitHub license](https://img.shields.io/github/license/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE)
 
 # Envio ABAP Proxy de saída para SAP PI
-> Compartilho a parte lógica de como fazer a implementação da interface de ECC ( ABAP Proxy ) para SAP PI ( multimapping ).
+
+  Compartilho a parte lógica de como fazer a implementação da interface de ECC ( ABAP Proxy ) para SAP PI ( multimapping ).
+
 [![ABAP Version][abap-image]][abap-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
@@ -126,7 +128,7 @@ Outras interfaces suportadas pela estrutura do adaptador são
 5. Em seguida, o mecanismo do sistema de mensagens publicou a mensagem na caixa de mensagens. A caixa de mensagem é uma tabela Microsoft SQL contendo mensagens a serem processadas
 6. O mecanismo do sistema de mensagens envia a mensagem para a orquestração ou porta de envio.
 
-### Segurança SAP PI / PO
+### Segurança SAP PI
 
 Para mensagens, o SAP PI fornece segurança de nível de mensagem para o protocolo de mensagem XI, para o adaptador SOAP, para o protocolo RosettaNet, para o adaptador de correio, para o protocolo CIDX e para conectividade com sistemas habilitados para WSRM (Web Service Reliable Messaging). No nível de mensagem SAP PI, a segurança ativada por meio do uso de criptografia, assinatura digital, SAML Assertion, Username token, Certificate token, etc. Os métodos de autenticação suportados pela infraestrutura WS para nível de transporte incluem autenticação básica (senha e nome de usuário), SAP assertion ticket e HTTP sobre SSL.
 
@@ -202,7 +204,7 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
 
 ### Transações ABAP PI  
    
- Transações relacionadas a serviços da Web:
+🎯 Transações relacionadas a serviços da Web:
    
   * SUDDIREG: Mantendo Registro UDDI.
   * SOAMANAGER: Iniciar SOA Manager.
@@ -210,7 +212,7 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
   * WSCONFIG: Configuração de serviços da Web no Web Service Framework.
   * WSPUBLISH: Publicar Web Services.
   
- Transações para administração:
+🎯 Transações para administração:
 
   * AL11: Exibição de Diretórios SAP para verificar o parâmetro de perfil DIR_TRANS.
   * AL08: Tela de lista de usuários conectados.
@@ -232,14 +234,14 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
   * RZ20: Monitoramento de CCMS.
   * RZ70: Administração de SLD.
   
- Transações PI para monitoramento:
+🎯 Transações PI para monitoramento:
  
   * SMGW: Gateway Monitor.
   * SXMB_MONI: Monitoramento Integration Engine.
   * SXI_MONITOR: Monitorar para mensagens XML processadas.
   * SXI_CACHE: PI Runtime Cache.
 
- Códigos T de Gerenciamento de Processos de Negócios(BPM):
+🎯 Códigos T de Gerenciamento de Processos de Negócios(BPM):
  
   * SWF_XI_ADM_BPE: Iniciar e parar o BPE.
   * SXMB_MONI_BPE: ferramenta de monitoramento para Business Process Engine (BPE).
@@ -248,7 +250,7 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
   * SWF_XI_ADM_BPE_DISP: Exibir o status do BPE.
   * SWELS: de ativação / desativação.
 
- Transação importantes do SAP PI/XI (Integração do processo):
+🎯 Transação importantes do SAP PI/XI (Integração do processo):
  
   * GRMG	          Solicitação genérica e gerador de mensagens
   * RZ10	          Editar perfil do sistema
@@ -340,15 +342,8 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
  PS.: Caso o passo anterior não funcionar no ECC, pode ser necessário criar conexão tipo G específica para o ESR.
 
 
-## Meta
 
-Victor Xisto – [@VictorXisto_](https://twitter.com/VictorXisto_) – victorxisto92@gmail.com
-
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
-
-[https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE](https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE)
-
-## Contributing
+## 🏆 Contribuição
 
 1. Faça o _fork_ do projeto (<https://github.com/VictorXisto/abap-proxy-sap-pi/fork>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
@@ -363,16 +358,19 @@ Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
 [![GitHub license](https://img.shields.io/github/license/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE)
 
 
-## Autor
+
+## 🎓 Autor
 ---
 
-![índice](https://user-images.githubusercontent.com/39013639/92557434-96346180-f242-11ea-811d-ccaa8d080f1b.png)
+
+<a href="https://ibb.co/61NVrc8">
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Victor Xisto</b></sub></a> ![índice](https://user-images.githubusercontent.com/39013639/92557434-96346180-f242-11ea-811d-ccaa8d080f1b.png)🚀
+ <sub><b>Victor Xisto</b></sub></a> <a href="https://ibb.co/61NVrc8//" title="Xisto">🚀</a>
 
 
 Feito por Victor Xisto 👋🏽 Entre em contato!
+
 
 [![Twitter Badge](https://img.shields.io/badge/-@VictorXisto_-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/VictorXisto_)](https://twitter.com/VictorXisto_) [![Linkedin Badge](https://img.shields.io/badge/-Xisto-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victorxisto/)](https://www.linkedin.com/in/victorxisto/) 
 [![Gmail Badge](https://img.shields.io/badge/-victorxisto92@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:victorxisto92@gmail.com)](mailto:victorxisto92@gmail.com)
