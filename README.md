@@ -1,22 +1,21 @@
 # 📝 Documentação SAP ABAP PI
  
+![SAP_PI_](https://user-images.githubusercontent.com/39013639/92533870-c4e21600-f209-11ea-9943-aaf625c6c85f.png) 
+ 
  
 [![GitHub issues](https://img.shields.io/github/issues/VictorXisto/abap-proxy-sap-pi?label=ABAP)](https://github.com/VictorXisto/abap-proxy-sap-pi/issues)
 [![GitHub forks](https://img.shields.io/github/forks/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/network)
 [![GitHub stars](https://img.shields.io/github/stars/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/stargazers)
 [![GitHub license](https://img.shields.io/github/license/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE)
 
-# Envio ABAP Proxy de saída para SAP PI
 
-  Compartilho a parte lógica de como fazer a implementação da interface de ECC ( ABAP Proxy ) para SAP PI ( multimapping ).
-
-![SAP_PI_](https://user-images.githubusercontent.com/39013639/92533870-c4e21600-f209-11ea-9943-aaf625c6c85f.png)
+# 🔎 Tópicos 
 	
 <!--ts-->
-   * [O que é SAP PI?](#o-que-e-sap-pi)
+   * [O que é SAP PI?](#o-que-é-sap-pi?)
    * [Compreendendo SAP PI](#compreendendo-sap-pi)
    * [SAP PI conecta diferentes plataformas](#sap-pi-conecta-diferentes-plataformas)
-   * [Por que SAP PI ?](#por-que-sap-pi)
+   * [Por que SAP PI ?](#por-que-sap-pi?)
    * [Como funciona SAP PI](#como-funciona-sap-pi)
    * [Arquitetura SAP PI](#arquitetura-sap-pi)
       * [Conectividade: Proxy Framework e Adapter Framework](#conectividade-proxy-framework-e-adapter-framework)
@@ -360,7 +359,7 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
 
 
 <a href="https://ibb.co/61NVrc8">
- <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://ibb.co/61NVrc8" width="100px;" alt=""/>
  <br />
  <sub><b>Victor Xisto</b></sub></a> <a href="https://ibb.co/61NVrc8//" title="Xisto">🚀</a>
 
