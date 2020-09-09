@@ -353,13 +353,12 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
 [![GitHub license](https://img.shields.io/github/license/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/blob/master/LICENSE)
 
 
-
 ## 🎓 Autor
 ---
 
 
 <a href="https://ibb.co/61NVrc8">
- <img style="border-radius: 50%;" src="https://ibb.co/61NVrc8" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.linkedin.com%2Fin%2Fvictorxisto&psig=AOvVaw0VyOpzhAtRki5GsaGciZsz&ust=1599719220393000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDuzdK42-sCFQAAAAAdAAAAABAD" width="100px;" alt=""/>
  <br />
  <sub><b>Victor Xisto</b></sub></a> <a href="https://ibb.co/61NVrc8//" title="Xisto">🚀</a>
 
