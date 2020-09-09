@@ -10,29 +10,25 @@
 
   Compartilho a parte lógica de como fazer a implementação da interface de ECC ( ABAP Proxy ) para SAP PI ( multimapping ).
 
-[![ABAP Version][abap-image]][abap-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 ![SAP_PI_](https://user-images.githubusercontent.com/39013639/92533870-c4e21600-f209-11ea-9943-aaf625c6c85f.png)
 	
 <!--ts-->
    * [O que é SAP PI?](#o-que-e-sap-pi)
    * [Compreendendo SAP PI](#compreendendo-sap-pi)
-   * [SAP PI conecta diferentes plataformas como](#sap-pi-conecta-diferentes-plataformas-como)
-   * [Por que SAP PI ?] (#por-que-sap-pi)
-   * [Como funciona SAP PI] (#como-funciona-sap-pi)
-   * [Arquitetura SAP PI] (#arquitetura-sap-pi)
-      * [Conectividade: Proxy Framework e Adapter Framework] (#conectividade-proxy-framework-e-adapter-framework)
-      * [Estrutura do Adaptador] (#estrutura-do-adaptador)
-      * [Como funciona a estrutura do adaptador] (#como-funciona-a-estrutura-do-adaptador)
-	  * [SAP PI Security] (#sap-pi-security)
-	  * [Benefícios da segurança no SAP PI] (#beneficios-da-seguranca-no-sap-pi)
-	  * [Novos recursos no SAP PI] (#novos-recursos-no-sap-pi)
+   * [SAP PI conecta diferentes plataformas](#sap-pi-conecta-diferentes-plataformas)
+   * [Por que SAP PI ?](#por-que-sap-pi)
+   * [Como funciona SAP PI](#como-funciona-sap-pi)
+   * [Arquitetura SAP PI](#arquitetura-sap-pi)
+      * [Conectividade: Proxy Framework e Adapter Framework](#conectividade-proxy-framework-e-adapter-framework)
+      * [Estrutura do Adaptador](#estrutura-do-adaptador)
+      * [Como funciona a estrutura do adaptador](#como-funciona-a-estrutura-do-adaptador)
+	  * [SAP PI Security](#sap-pi-security)
+	  * [Benefícios da segurança no SAP PI](#beneficios-da-seguranca-no-sap-pi)
+	  * [Novos recursos no SAP PI](#novos-recursos-no-sap-pi)
    * [Vantagens do SAP PI](#vantagens-do-sap-pi)
-   * [SAP PI vs BizTalk](#sap-pi-vs-biztalk)
-   * [Transações ABAP PI] (#transacoes-abap-pi)
-   * [Habilitar ABAP Proxy SAP ERP] (#habilitar-abap-proxy-sap-erp)
+   * [SAP PI x BizTalk](#sap-pi-vs-biztalk)
+   * [Transações ABAP PI](#transacoes-abap-pi)
+   * [Habilitar ABAP Proxy SAP ERP](#habilitar-abap-proxy-sap-erp)
 <!--te-->	
 
 ### O que é SAP PI?
@@ -145,7 +141,7 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
   * No sistema receptor, um usuário pode ser auditado
   * Configuração dinâmica no canal do receptor PI
 
-### Novos recursos no SAP PI / PO
+### Novos recursos no SAP PI
 
    Os novos recursos do SAP PI incluem:
    
@@ -160,14 +156,14 @@ Para se conectar ao sistema ativado para WSRM, você usa um canal de comunicaç�
   * Perspectivas centradas no usuário no ESR
   * Add-on para SAP PI: add-on Secure Connectivity (SGTP Adapter, módulo PGP) e add-ons B2B (adaptador OFTP, adaptador AS2, separador EDI, conversor EDI XML etc.)
 
-### Vantagens do SAP PI / PO
+### Vantagens do SAP PI
 
   * Em comparação com qualquer outro produto de middleware, o monitoramento do SAP PI é melhor. Ele oferece recursos de monitoramento como mensagem, desempenho, monitoramento de componente e assim por diante, todos os quais podem ser usados ​​para rastrear e retificar os erros.
   * SAP PI oferece suporte a vários componentes SAP que são necessários durante a integração com SAP PI
   * Adaptadores e mapeamentos são bons em comparação com qualquer outro produto de middleware
   * A comunicação assíncrona e síncrona é possível
 
-### SAP PI vs. BizTalk
+### SAP PI vs BizTalk
 
 ## SAP PI										## BizTalk
 
