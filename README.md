@@ -1,8 +1,7 @@
 # 📝 Documentação SAP ABAP PI
 
-<div align="center">
 ![SAP_PI_](https://user-images.githubusercontent.com/39013639/92533870-c4e21600-f209-11ea-9943-aaf625c6c85f.png) 
-</div>
+
  
 [![GitHub issues](https://img.shields.io/github/issues/VictorXisto/abap-proxy-sap-pi?label=ABAP)](https://github.com/VictorXisto/abap-proxy-sap-pi/issues)
 [![GitHub forks](https://img.shields.io/github/forks/VictorXisto/abap-proxy-sap-pi)](https://github.com/VictorXisto/abap-proxy-sap-pi/network)
