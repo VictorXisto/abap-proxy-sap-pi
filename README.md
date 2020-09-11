@@ -41,7 +41,7 @@
 * [Eclipse PI Tools](#Eclipse-PI-Tools)
 * [Central Message Monitor](#Central-Message-Monitor)
 * [Administrador NetWeaver (NWA)](#Administrador-NetWeaver-(NWA))
-* [Conectividade: Proxy Framework e Adapter Framework](#Conectividade:-Proxy-Framework-e-Adapter-Framework)
+* [Conectividade - Proxy Framework e Adapter Framework](#Conectividade----Proxy-Framework-e-Adapter-Framework)
 * [Estrutura do adaptador](#Estrutura-do-adaptador)
 * [Como funciona a estrutura do adaptador?](#Como-funciona-a-estrutura-do-adaptador?)
 * [Como desenvolver interfaces em SAP PI (PO)](#Como-desenvolver-interfaces-em-SAP-PI-(PO))
@@ -275,7 +275,7 @@ Este é realmente o único componente central que pode ser usado para monitorar 
 NWA é o portal do administrador do SAP PI. Autorização de usuário, certificados, chaves, parâmetros relacionados ao desempenho, portas, destinos, etc. são definidos pelos administradores do sistema SAP PI (consultores BASIS) e configurados no NWA.
 	
 	
-### Conectividade: Proxy Framework e Adapter Framework
+### Conectividade - Proxy Framework e Adapter Framework
 
 ### Estrutura do adaptador:
 
