@@ -579,7 +579,7 @@
 
 	Ambos são conexões TCP / IP do tipo T. Se eles não estiverem funcionando, você precisa entrar em contato com sua equipe BASIS.
 
-	![sld-rfc-destinations-sld_nuc-sld_uc-sm59-sap-pi-po](https://user-images.githubusercontent.com/39013639/92834437-6905c180-f3b0-11ea-8c0c-29a6d1502a85.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92834437-6905c180-f3b0-11ea-8c0c-29a6d1502a85.png)"/>
 	
 	Destinos SLD_UNC e SLD_UC TCP/IP RFC gerados automaticamente.
 	
@@ -625,11 +625,13 @@
 	* Logon e segurança.
 	
 	
-	![proxy-rfc-destination-pi-po-from-ecc-sap-backend-sm59-technical-setting](https://user-images.githubusercontent.com/39013639/92835177-4c1dbe00-f3b1-11ea-8ad9-8f5e89134b99.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92835177-4c1dbe00-f3b1-11ea-8ad9-8f5e89134b99.png)"/>
+	
 	Destino HTTP RFC para AAE ou AEX de Process Orchestration ( PO ).
 
 	
-	![proxy-rfc-destination-pi-po-from-ecc-sap-backend-sm59-logon-security](https://user-images.githubusercontent.com/39013639/92835405-9010c300-f3b1-11ea-9bc5-a7ce0e9f0a48.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92835405-9010c300-f3b1-11ea-9bc5-a7ce0e9f0a48.png)"/>
+
 	Manter o nome de usuário e a senha do sistema PI/PO no procedimento de logon 'Basic Authorization'.
 
 
@@ -647,39 +649,45 @@
 	* Prefixo do caminho = / rep
 	* Logon e segurança = igual ao destino HTTP para back-end ABAP na etapa 1.
 	
-	![proxy-esr-rfc-destination-pi-po-from-ecc-sap-backend-sm59-technical-setting](https://user-images.githubusercontent.com/39013639/92835788-0f05fb80-f3b2-11ea-9f74-720b20911414.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92835788-0f05fb80-f3b2-11ea-9f74-720b20911414.png)"/>
+
 	Destino HTTP para ESR no sistema back-end SAP transação SM59.
 
 ### Passo 3 - Configurar destino HTTP RFC para System Landscape Directory (SLD).
 	
 	Crie outro destino HTTP RFC para SLD na transação SM59. Reutilizaremos esse destino HTTP no Passo 5 para configurar os dados de acesso SLD na transação SLDPICUST .
 
-	![proxy-settings-sld-http-destination-sm59-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836010-4e344c80-f3b2-11ea-99fc-198f73dddf64.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836010-4e344c80-f3b2-11ea-99fc-198f73dddf64.png)"/>
+	
 	Destino HTTP RFC para System Landscape Directory (SLD).
 
 ### Passo 4 - Configurar o Integration Engine usando a transação SXMB_ADM.
 	
 	Acesse SXMB_ADM e selecione o nó 'Integration Engine Configuration'.
 	
-	![abap-proxy-connection-sxmb_adm-integration-engine-configuration-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836197-83409f00-f3b2-11ea-9839-81ed7d75df30.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836197-83409f00-f3b2-11ea-9839-81ed7d75df30.png)"/>
+
 	Selecione o nó de configuração do Integration Engine do administrador SXMB_ADM.
 
 	
 	Em seguida, escolha a opção 'Configuration'.
 
-	![abap-proxy-connection-sxmb_adm-integration-engine-configuration-2-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836391-bbe07880-f3b2-11ea-9c78-2746e9709009.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836391-bbe07880-f3b2-11ea-9c78-2746e9709009.png)"/>
+
 	Escolha a opção 'Configuration'.
 
 	
 	
 	Adicione novas entradas à configuração e defina os parâmetros ' IS_URL ', ' HTTP_TIMEOUT ' e ' ENGINE_TYPE '.
 	
-	![abap-proxy-connection-sxmb_adm-integration-engine-configuration-new-entry-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836535-e5010900-f3b2-11ea-85c2-23acbc1f54bd.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836535-e5010900-f3b2-11ea-85c2-23acbc1f54bd.png)"/>
+
 	Adicionar novas entradas à configuração do SXMB_ADM Integration Engine.
 	
 	
 	
-	![abap-proxy-connection-sxmb_adm-integration-engine-configuration-engine-type-is_url-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836608-fd712380-f3b2-11ea-9ef7-9e014896fd1d.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836608-fd712380-f3b2-11ea-9ef7-9e014896fd1d.png)"/>
+
 	Configurações para os parâmetros IS_URL ',' HTTP_TIMEOUT 'e' ENGINE_TYPE 'do Integration Engine.
 
 	O nome do destino após os caracteres dest: // é o destino RFC que criamos no Passo 1.
@@ -691,7 +699,8 @@
 
 	Estas são as configurações recomendadas. Mas você também pode configurar diretamente o URL SLD sem destino HTTP.
 	
-	![proxy-setting-sldapicust-http-destination-sld-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836778-2beefe80-f3b3-11ea-9062-c88f458a43db.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836778-2beefe80-f3b3-11ea-9062-c88f458a43db.png)"/>
+
 	Configurações de SLDAPICUST para alias SAP_CONFIG.
 
 
@@ -701,27 +710,31 @@
 
 	Vá para NWA> Configuração> Infraestrutura> Destinos e crie um destino HTTP para o Netweaver Integration Engine.
 	
-	![proxy-settings-http-destination-nwa-sap-pi-po-1](https://user-images.githubusercontent.com/39013639/92836895-50e37180-f3b3-11ea-8891-e4e71f518196.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92836895-50e37180-f3b3-11ea-8891-e4e71f518196.png)"/>
+
 	NWA> Configuração> Infraestrutura> Destinos.
 	
 	
 	Crie um novo destino usando o assistente de criação de novo destino.
-	![proxy-configuration-http-new-destination-nwa-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836978-68225f00-f3b3-11ea-8830-3f102f1c8f0b.png)
+
+<img src="(https://user-images.githubusercontent.com/39013639/92836978-68225f00-f3b3-11ea-8830-3f102f1c8f0b.png)"/>
+
 	Escolha Criar novo destino em NWA.
 	
 	
 	Normalmente, o nome do destino é definido como <SAP System ID> CLNT <Client Number> _HTTP. Neste exemplo, o nome do destino é SADCLNT100_HTTP. O tipo de destino é HTTP.
 
-	![proxy-setting-create-http-destination-nwa-wizard-general-data-sap-pi-po-2](https://user-images.githubusercontent.com/39013639/92837105-89834b00-f3b3-11ea-865a-751a519dbcaf.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92837105-89834b00-f3b3-11ea-865a-751a519dbcaf.png)"/>
+
 	Configure o destino por meio do assistente.
 
-	Na próxima tela, defina os detalhes de Conexão e Transporte. Parâmetros de URL, ID do sistema, cliente e idioma são obrigatórios.
-
 	
+	Na próxima tela, defina os detalhes de Conexão e Transporte. Parâmetros de URL, ID do sistema, cliente e idioma são obrigatórios.
 	
 	O ID do sistema é o ID do sistema SAP (SAD neste exemplo). E o cliente é 900.
 
-	![proxy-configuration-http-destination-url-sap-system-dettail-new-wizard-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837218-b33c7200-f3b3-11ea-904f-120c1cce6364.png)
+<img src="(https://user-images.githubusercontent.com/39013639/92837218-b33c7200-f3b3-11ea-904f-120c1cce6364.png)"/>
+
 	Detalhes de conexão e transporte. Parâmetros de URL, ID do sistema, cliente e idioma.
 	
 	
@@ -730,7 +743,8 @@
 
 	
 	O próximo passo é definir os dados de logon. Neste exemplo, usarei o método de autenticação básica com nome de usuário e senha.
-	![proxy-setting-http-destination-basic-authentication-username-password-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837366-dd8e2f80-f3b3-11ea-95f8-ca990de4bea5.png)
+
+<img src="(https://user-images.githubusercontent.com/39013639/92837366-dd8e2f80-f3b3-11ea-95f8-ca990de4bea5.png)"/>
 	
 	Este destino HTTP será reutilizado no Canal de Comunicação do Receptor SOAP no passo 7.
 	
