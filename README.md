@@ -41,13 +41,13 @@
 * [Eclipse PI Tools](#Eclipse-PI-Tools)
 * [Central Message Monitor](#Central-Message-Monitor)
 * [Administrador NetWeaver (NWA)](#Administrador-NetWeaver-(NWA))
-* [Conectividade: Proxy Framework e Adapter Framework](#Conectividade-:-Proxy-Framework-e-Adapter-Framework)
+* [Conectividade: Proxy Framework e Adapter Framework](#Conectividade:Proxy-Framework-e-Adapter-Framework)
 * [Estrutura do adaptador](#Estrutura-do-adaptador)
 * [Como funciona a estrutura do adaptador?](#Como-funciona-a-estrutura-do-adaptador?)
 * [Como desenvolver interfaces em SAP PI (PO)](#Como-desenvolver-interfaces-em-SAP-PI-(PO))
-	* [Etapa 1 - System Landscape Directory SLD](#Etapa-1-:-System-Landscape-Directory-(SLD))
-	* [Etapa 2 - Enterprise Service Repository (ESR)](#Etapa-2-:-Enterprise-Service-Repository-(ESR))
-	* [Etapa 3 - Diretório de integração (ID)](#Etapa-3-:-Diretório-de-integração-(ID))
+	* [Etapa 1 - System Landscape Directory SLD](#Etapa-1:System-Landscape-Directory-(SLD))
+	* [Etapa 2 - Enterprise Service Repository (ESR)](#Etapa-2:Enterprise-Service-Repository-(ESR))
+	* [Etapa 3 - Diretório de integração (ID)](#Etapa-3:Diretório-de-integração-(ID))
 * [Ambientes de desenvolvimento integrado (IDE) do SAP PI / PO](#Ambientes-de-desenvolvimento-integrado-(IDE)-do-SAP-PI-/-PO)
 * [Clientes Java Swing](#Clientes-Java-Swing)
 * [Programa de mapeamento gráfico de mensagens no ESB](#Programa-de-mapeamento-gráfico-de-mensagens-no-ESB)
@@ -68,9 +68,9 @@
 * [Guia completo de configuração de proxy para SAP PI/PO e ECC](#Guia-completo-de-configuração-de-proxy-para-SAP-PI/PO-e-ECC)
 * [Versões SAP usadas](#Versões-SAP-usadas)
 * [Pré-requisitos para configurar a conectividade do proxy](#Pré-requisitos-para-configurar-a-conectividade-do-proxy)
-	* [Requisito 1: Sistema SAP registrado no System Landscape Directory (SLD)](#Requisito-1-:-Sistema-SAP-registrado-no-System-Landscape-Directory-(SLD))
-	* [Requisito 2: os destinos SLD RFC são criados](#Requisito-2-:-os-destinos-SLD-RFC-são-criados)
-	* [Requisito 3: A configuração SICF é concluída pela equipe do BASIS](#Requisito-3-:-A-configuração-SICF-é-concluída-pela-equipe-do-BASIS)
+	* [Requisito 1 - Sistema SAP registrado no System Landscape Directory (SLD)](#Requisito-1---Sistema-SAP-registrado-no-System-Landscape-Directory-(SLD))
+	* [Requisito 2 - Os destinos SLD RFC são criados](#Requisito-2---Os-destinos-SLD-RFC-são-criados)
+	* [Requisito 3 - A configuração SICF é concluída pela equipe do BASIS](#Requisito-3---A-configuração-SICF-é-concluída-pela-equipe-do-BASIS)
 * [Exemplo de configuração de proxy](#Exemplo-de-configuração-de-proxy)
 * [Etapas para configurar a comunicação de proxy entre o back-end SAP ECC e PI/PO](#Etapas-para-configurar-a-comunicação-de-proxy-entre-o-back-end-SAP-ECC-e-PI/PO)
 	* [Passo 1 - Criar destino para Advanced Adapter Engine (AAE) no SM59](#Passo-1---Criar-destino-para-Advanced-Adapter-Engine-(AAE)-no-SM59)
@@ -106,26 +106,26 @@ Mais importante ainda, ele fornece um local central para uma organização const
 
 ### SAP PI conecta diferentes plataformas como:
 
-	* Sistemas SAP e não SAP.
-	* Cenários B2B e A2A.
-	* Comunicações Assíncronas e Síncronas.
-	* Gerenciamento de processos de negócios de vários componentes.
+* Sistemas SAP e não SAP.
+* Cenários B2B e A2A.
+* Comunicações Assíncronas e Síncronas.
+* Gerenciamento de processos de negócios de vários componentes.
 	
 ### Principais funções do SAP PI
 
-	* Conectando sistemas usando protocolos de comunicação como sFTP, AS2, SOAP, HTTP, etc.
-	* Roteie mensagens entre sistemas. O PI / PO pode rotear mensagens de um sistema emissor para um ou mais sistemas receptores com base em regras de processo de negócios ou regras técnicas de roteamento.
-	* Transforme ou mapeie os formatos de mensagem entre o remetente e os sistemas de destino.
-	* Fornece um ambiente de tempo de execução para troca de mensagens entre sistemas e recursos de monitoramento de interface.
-	* Execute fluxos de trabalho de integração com uma série de etapas, como integração do processo de pedido de compra com ações de aprovação.
+* Conectando sistemas usando protocolos de comunicação como sFTP, AS2, SOAP, HTTP, etc.
+* Roteie mensagens entre sistemas. O PI / PO pode rotear mensagens de um sistema emissor para um ou mais sistemas receptores com base em regras de processo de negócios ou regras técnicas de roteamento.
+* Transforme ou mapeie os formatos de mensagem entre o remetente e os sistemas de destino.
+* Fornece um ambiente de tempo de execução para troca de mensagens entre sistemas e recursos de monitoramento de interface.
+* Execute fluxos de trabalho de integração com uma série de etapas, como integração do processo de pedido de compra com ações de aprovação.
 	
 ### Como funciona SAP PI
 
-   SAP PI executa três funções básicas, são elas:
+SAP PI executa três funções básicas, são elas:
 
-    * Ligação: SAP PI tem uma capacidade de integração com todos os aplicativos, independentemente de se tratar de um aplicativo de um 3 rd partido ou do SAP. Ele usa a estrutura do adaptador para integrar 3 rd soluções do partido.
-    * Coordenar: pode definir um caminho / fluxo de trabalho para cada transação de negócios integrada. Ele garante que cada mensagem seja entregue corretamente da origem ao destino de destino
-    * Comunicar: pode traduzir arquivos em qualquer formato, seja um formato de arquivo interno ou qualquer padrão de integração business to business.
+* Ligação: SAP PI tem uma capacidade de integração com todos os aplicativos, independentemente de se tratar de um aplicativo de um 3 rd partido ou do SAP. Ele usa a estrutura do adaptador para integrar 3 rd soluções do partido.
+* Coordenar: pode definir um caminho / fluxo de trabalho para cada transação de negócios integrada. Ele garante que cada mensagem seja entregue corretamente da origem ao destino de destino
+* Comunicar: pode traduzir arquivos em qualquer formato, seja um formato de arquivo interno ou qualquer padrão de integração business to business.
 
 ### Evolução das versões SAP XI, PI e PO:
 
@@ -202,12 +202,12 @@ SAP PO é uma combinação de vários produtos agrupados.
 
 No qual inclui:
 
-	* Gestão de Processos de Negócios (BPM);
-    * Gerenciamento de regras de negócios (BRM);
-	* Enterprise Service Repository (ESR);
-	* Integração de Processo (PI);
-	* Colaboração B2B;
-	* Integração na nuvem;
+* Gestão de Processos de Negócios (BPM);
+* Gerenciamento de regras de negócios (BRM);
+* Enterprise Service Repository (ESR);
+* Integração de Processo (PI);
+* Colaboração B2B;
+* Integração na nuvem;
 	
 	
 ![overview-sap-po-products-pi-brm-bpm-b2b-esr-cpi](https://user-images.githubusercontent.com/39013639/92827152-e842c780-f3a7-11ea-9ed9-cf4f937432bc.png)
@@ -216,12 +216,12 @@ Componentes do SAP Process Orchestration (PO)
 
 ### SAP PI pode ser dividido em:
 
-	* Enterprise Service Repository (ESR)
-	* Diretório de integração (ID)
-    * System Landscape Directory (SLD)
-	* Advance Adapter Engine (AAE)
-	
-	A funcionalidade de ESR, ID e AAE são agrupadas como Advance Adapter Engine (AAX) nas versões SAP PI / PO de pilha única.
+* Enterprise Service Repository (ESR)
+* Diretório de integração (ID)
+* System Landscape Directory (SLD)
+* Advance Adapter Engine (AAE)
+
+A funcionalidade de ESR, ID e AAE são agrupadas como Advance Adapter Engine (AAX) nas versões SAP PI / PO de pilha única.
 
 
 ### Arquitetura de versões de pilha única única PI ou PO
@@ -552,11 +552,11 @@ Antes de iniciar a configuração do proxy no sistema back-end ECC e PI / PO, vo
 
 3 - A configuração do SICF é concluída pela equipe do BASIS.
 	
-### Requisito 1: Sistema SAP registrado no System Landscape Directory (SLD).
+### Requisito 1 - Sistema SAP registrado no System Landscape Directory (SLD).
 
 Certifique-se de ter registrado o sistema ECC back-end SAP no System Landscape Directory (SLD) . O sistema de negócios do sistema SAP deve ser criado e importado para o diretório de integração. O nome do SAP Business System neste exemplo é SADCLNT900 .
 
-### Requisito 2: os destinos SLD RFC são criados.
+### Requisito 2 - Os destinos SLD RFC são criados.
 
 Ao registrar o sistema técnico SAP no System Landscape Directory (SLD), os destinos RFC para SLD são criados automaticamente. Os nomes de destinos RFC gerados automaticamente são SLD_NUC e SLD_UC . Certifique-se de que esses dois destinos RFC estejam disponíveis no sistema back-end SAP e funcionando.
 
@@ -566,7 +566,7 @@ Ambos são conexões TCP / IP do tipo T. Se eles não estiverem funcionando, voc
 	
 Destinos SLD_UNC e SLD_UC TCP/IP RFC gerados automaticamente.
 	
-### Requisito 3: A configuração SICF é concluída pela equipe do BASIS.
+### Requisito 3 - A configuração SICF é concluída pela equipe do BASIS.
 	
 Certifique-se de que os Serviços estejam registrados no SICF pela equipe BASIS.
 
