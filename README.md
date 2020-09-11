@@ -12,85 +12,18 @@
 # 🔎 Tópicos 
 	
 <!--ts-->
-	* [O que é SAP PI/PO?](#o-que-é-sap-pi-/-po-?)
-	* [Funcionalidades do SAP PI/PO](#funcionalidades-do-sap-pi-/-po)
-	* [SAP PI conecta diferentes plataformas como](#sap-pi-conecta-diferentes-plataformas-como)
-	* [Principais funções do SAP PI](#principais-funções-do-sap-pi)
-	* [Como funciona SAP PI](#como-funciona-sap-pi)
-	* [Evolução das versões SAP XI, PI e PO](#evolução-das-versões-sap-xi-,-pi-e-po)
-	* [Exchange Infrastructure (XI)](#exchange-infrastructure-(XI))
-	* [Process Integration (PI)](#process-integration-(PI))
-	* [Process Orchestration (PO)]
-	* [Cloud Platform (CPI) e HANA Cloud Platform Integration (HCI)]
-	* [Vantagens do SAP PI/PO sobre outros middleware não SAP]
-	* [Conjunto abrangente de opções de conectividade (adaptadores)]
-	* [Simplicidade de construção de interfaces]
-	* [Capacidades de monitoramento de interface central]
-	* [Arquitetura SAP PI]
-	* [A Arquitetura Process Orchestration SAP PO]
-	* [O que é SAP Process Orchestration (PO)?]
-	* [SAP PI pode ser dividido em]
-	* [Arquitetura de versões de pilha única única PI ou PO]
-	* [System Landscape Directory (SLD)]
-	* [Conteúdo do Enterprise Service Repository (ESR)]
-	* [ES Builder]
-	* [Configuration Content]
-	* [Integration Builder]
-	* [Integration Experts]
-	* [Adapter Engine]
-	* [Eclipse PI Tools]
-	* [Central Message Monitor]
-	* [Administrador NetWeaver (NWA)]
-	* [Conectividade: Proxy Framework e Adapter Framework]
-	* [Estrutura do adaptador]
-	* [Como funciona a estrutura do adaptador?]
-	* [Como desenvolver interfaces em SAP PI (PO)]
-	* [Etapa 1 - System Landscape Directory (SLD)]
-	* [Etapa 2 - Enterprise Service Repository (ESR)]
-	* [Etapa 3 - Diretório de integração (ID)]
-	* [Ambientes de desenvolvimento integrado (IDE) do SAP PI / PO]
-	* [Clientes Java Swing]
-	* [Programa de mapeamento gráfico de mensagens no ESB]
-	* [Construtor de integração]
-	* [Eclipse NetWeaver Developer Studio (NWDS)]
-	* [SAP NetWeaver Developer Studio]
-	* [Navegador de serviços corporativos de NWDS]
-	* [Programa de mapeamento de mensagens em NWDS]
-	* [iFlow no PI Explorer do NWDS]
-	* [Como criar programas de mapeamento de mensagens no SAP PI / PO]
-	* [Mapeamento Gráfico]
-	* [Mapeamento Java]
-	* [Mapeamento XSLT]
-	* [Etapas de processamento de mensagens no SAP PI/PO]
-	* [Visão geral do pipeline de processamento de mensagens de AAX]
-	* [Remoção de pilha ABAP]
-	* [Cloud Integration Runtime incluído no SAP PO local]
-	* [Complemento de B2B para integração de EDI de B2B em vez de adaptador Seeburger
-	* [Guia completo de configuração de proxy para SAP PI/PO e ECC]
-	* [Versões SAP usadas]
-	* [Pré-requisitos para configurar a conectividade do proxy]
-	* [Pré-requisito 1: Sistema SAP registrado no System Landscape Directory (SLD)]
-	* [Pré-requisito 2: os destinos SLD RFC são criados]
-	* [Pré-requisito 3: A configuração SICF é concluída pela equipe do BASIS]
-	* [Exemplo de configuração de proxy]
-	* [Etapas para configurar a comunicação de proxy entre o back-end SAP ECC e PI/PO]
-	* [Passo 1 - Criar destino para Advanced Adapter Engine (AAE) no SM59]
-	* [Parâmetros usados ​​para destino HTTP AAE]
-	* [Passo 2 - Criar destino HTTP para o Enterprise Resource Repository (ESR)]
-	* [Parâmetros usados ​​para conexão HTTP ao ESR]
-	* [Passo 3 - Configurar destino HTTP RFC para System Landscape Directory (SLD)]
-	* [Passo 4 - Configurar o Integration Engine usando a transação SXMB_ADM]
-	* [Passo 5 - Configurar dados de acesso SLD via SLDAPICUST]
-	* [Passo 6 - Criar destino HTTP no administrador do Net-weaver (NWA)]
-	* [Passo 7 - Criar Canal de Comunicação SOAP (HTTP) Remetente e Receptor]
-	* [Como testar a conectividade do proxy]
-	* [Verifique se os destinos RFC e HTTP estão funcionando bem]
-	* [Teste o status SLD com a transação SLDCHECK]
-	* [Teste a conexão ESR com SPROX_CHECK_IFR_RESPONSE]
-	* [Verifique os objetos proxy por meio da transação SPROXY]
-	* [Teste os canais de comunicação por meio do Runtime Monitor]
-	* [Transações ABAP PI]  
-<!--te-->	
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Instalação](#instalacao)
+   * [Como usar](#como-usar)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tests](#testes)
+   * [Tecnologias](#tecnologias)
+<!--te-->
 
 ### O que é SAP PI/PO?
 
