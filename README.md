@@ -562,7 +562,7 @@ Ao registrar o sistema técnico SAP no System Landscape Directory (SLD), os dest
 
 Ambos são conexões TCP / IP do tipo T. Se eles não estiverem funcionando, você precisa entrar em contato com sua equipe BASIS.
 
-<img src="(https://user-images.githubusercontent.com/39013639/92834437-6905c180-f3b0-11ea-8c0c-29a6d1502a85.png)"/>
+![sld-rfc-destinations-sld_nuc-sld_uc-sm59-sap-pi-po](https://user-images.githubusercontent.com/39013639/92834437-6905c180-f3b0-11ea-8c0c-29a6d1502a85.png)
 	
 Destinos SLD_UNC e SLD_UC TCP/IP RFC gerados automaticamente.
 	
@@ -592,205 +592,205 @@ Os dados foram substituídos nas capturas de tela da seguinte forma:
 
 ### Passo 1 - Criar destino para Advanced Adapter Engine (AAE) no SM59.
 
-	Este destino do tipo G (Conexão HTTP com Servidor Externo) é direcionado para Advance Adapter Engine (AAE) de Process Integration (PI) ou Process Orchestration (PO).
+Este destino do tipo G (Conexão HTTP com Servidor Externo) é direcionado para Advance Adapter Engine (AAE) de Process Integration (PI) ou Process Orchestration (PO).
 
-	Você pode nomear o destino HTTP_ <PI / PO System ID>. Vamos supor que o ID do sistema do servidor de desenvolvimento seja POD. O nome do destino HTTP será HTTP_POD.
+Você pode nomear o destino HTTP_ <PI / PO System ID>. Vamos supor que o ID do sistema do servidor de desenvolvimento seja POD. O nome do destino HTTP será HTTP_POD.
 	
 ### Parâmetros usados ​​para destino HTTP AAE.
 
-	* Tipo de conexão = G (conexão HTTP para servidor externo)
-	* Host de destino = <Nome do host de AAE ou AEX>
-	* Porta (Nº do serviço) = <Número da porta HTTP do servidor host AAE ou AEX>: Padrão 50000
-	
-	A porta para HTTP é '5 <número do sistema> 00' e para HTTPS - '5 <número do sistema> 01'. A porta padrão para o servidor J2EE é '50000'.
+* Tipo de conexão = G (conexão HTTP para servidor externo)
+* Host de destino = <Nome do host de AAE ou AEX>
+* Porta (Nº do serviço) = <Número da porta HTTP do servidor host AAE ou AEX>: Padrão 50000
 
-	* Prefixo do caminho = / XISOAPAdapter / MessageServlet? Ximessage = true
-	* Logon e segurança.
+A porta para HTTP é '5 <número do sistema> 00' e para HTTPS - '5 <número do sistema> 01'. A porta padrão para o servidor J2EE é '50000'.
+
+* Prefixo do caminho = / XISOAPAdapter / MessageServlet? Ximessage = true
+* Logon e segurança.
 	
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92835177-4c1dbe00-f3b1-11ea-8ad9-8f5e89134b99.png)"/>
+![proxy-rfc-destination-pi-po-from-ecc-sap-backend-sm59-technical-setting](https://user-images.githubusercontent.com/39013639/92835177-4c1dbe00-f3b1-11ea-8ad9-8f5e89134b99.png)
 	
-	Destino HTTP RFC para AAE ou AEX de Process Orchestration ( PO ).
+Destino HTTP RFC para AAE ou AEX de Process Orchestration ( PO ).
 
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92835405-9010c300-f3b1-11ea-9bc5-a7ce0e9f0a48.png)"/>
+![proxy-rfc-destination-pi-po-from-ecc-sap-backend-sm59-logon-security](https://user-images.githubusercontent.com/39013639/92835405-9010c300-f3b1-11ea-9bc5-a7ce0e9f0a48.png)
 
-	Manter o nome de usuário e a senha do sistema PI/PO no procedimento de logon 'Basic Authorization'.
+Manter o nome de usuário e a senha do sistema PI/PO no procedimento de logon 'Basic Authorization'.
 
 
 ### Passo 2 - Criar destino HTTP para o Enterprise Resource Repository (ESR).
 
-	Este destino RFC é usado pela transação SPROXY para importar objetos do Repositório Corporativo e gerar objetos Proxy. Você pode nomear o destino RFC SAP_PROXY_ESR.
+Este destino RFC é usado pela transação SPROXY para importar objetos do Repositório Corporativo e gerar objetos Proxy. Você pode nomear o destino RFC SAP_PROXY_ESR.
 
 ### Parâmetros usados ​​para conexão HTTP ao ESR.
 
-	As configurações técnicas desse destino HTTP RFC são semelhantes ao destino HTTP para o back-end ABAP.
+As configurações técnicas desse destino HTTP RFC são semelhantes ao destino HTTP para o back-end ABAP.
 
-	* Tipo de conexão = G (conexão HTTP para servidor externo)
-	* Host de destino = <Nome do host de AAE ou AEX>
-	* Porta (Nº do serviço) = <Número da porta HTTP do servidor host AAE ou AEX>: Padrão 50000
-	* Prefixo do caminho = / rep
-	* Logon e segurança = igual ao destino HTTP para back-end ABAP na etapa 1.
+* Tipo de conexão = G (conexão HTTP para servidor externo)
+* Host de destino = <Nome do host de AAE ou AEX>
+* Porta (Nº do serviço) = <Número da porta HTTP do servidor host AAE ou AEX>: Padrão 50000
+* Prefixo do caminho = / rep
+* Logon e segurança = igual ao destino HTTP para back-end ABAP na etapa 1.
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92835788-0f05fb80-f3b2-11ea-9f74-720b20911414.png)"/>
+![proxy-esr-rfc-destination-pi-po-from-ecc-sap-backend-sm59-technical-setting](https://user-images.githubusercontent.com/39013639/92835788-0f05fb80-f3b2-11ea-9f74-720b20911414.png)
 
-	Destino HTTP para ESR no sistema back-end SAP transação SM59.
+Destino HTTP para ESR no sistema back-end SAP transação SM59.
 
 ### Passo 3 - Configurar destino HTTP RFC para System Landscape Directory (SLD).
 	
-	Crie outro destino HTTP RFC para SLD na transação SM59. Reutilizaremos esse destino HTTP no Passo 5 para configurar os dados de acesso SLD na transação SLDPICUST .
+Crie outro destino HTTP RFC para SLD na transação SM59. Reutilizaremos esse destino HTTP no Passo 5 para configurar os dados de acesso SLD na transação SLDPICUST .
 
-<img src="(https://user-images.githubusercontent.com/39013639/92836010-4e344c80-f3b2-11ea-99fc-198f73dddf64.png)"/>
+![proxy-settings-sld-http-destination-sm59-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836010-4e344c80-f3b2-11ea-99fc-198f73dddf64.png)
 	
-	Destino HTTP RFC para System Landscape Directory (SLD).
+Destino HTTP RFC para System Landscape Directory (SLD).
 
 ### Passo 4 - Configurar o Integration Engine usando a transação SXMB_ADM.
 	
-	Acesse SXMB_ADM e selecione o nó 'Integration Engine Configuration'.
+Acesse SXMB_ADM e selecione o nó 'Integration Engine Configuration'.
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92836197-83409f00-f3b2-11ea-9839-81ed7d75df30.png)"/>
+![abap-proxy-connection-sxmb_adm-integration-engine-configuration-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836197-83409f00-f3b2-11ea-9839-81ed7d75df30.png)
 
-	Selecione o nó de configuração do Integration Engine do administrador SXMB_ADM.
+Selecione o nó de configuração do Integration Engine do administrador SXMB_ADM.
 
+
+Em seguida, escolha a opção 'Configuration'.
+
+![abap-proxy-connection-sxmb_adm-integration-engine-configuration-2-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836391-bbe07880-f3b2-11ea-9c78-2746e9709009.png)
+
+Escolha a opção 'Configuration'.
+
+
+
+Adicione novas entradas à configuração e defina os parâmetros ' IS_URL ', ' HTTP_TIMEOUT ' e ' ENGINE_TYPE '.
 	
-	Em seguida, escolha a opção 'Configuration'.
+![abap-proxy-connection-sxmb_adm-integration-engine-configuration-new-entry-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836535-e5010900-f3b2-11ea-85c2-23acbc1f54bd.png)
 
-<img src="(https://user-images.githubusercontent.com/39013639/92836391-bbe07880-f3b2-11ea-9c78-2746e9709009.png)"/>
-
-	Escolha a opção 'Configuration'.
-
-	
-	
-	Adicione novas entradas à configuração e defina os parâmetros ' IS_URL ', ' HTTP_TIMEOUT ' e ' ENGINE_TYPE '.
-	
-<img src="(https://user-images.githubusercontent.com/39013639/92836535-e5010900-f3b2-11ea-85c2-23acbc1f54bd.png)"/>
-
-	Adicionar novas entradas à configuração do SXMB_ADM Integration Engine.
+Adicionar novas entradas à configuração do SXMB_ADM Integration Engine.
 	
 	
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92836608-fd712380-f3b2-11ea-9ef7-9e014896fd1d.png)"/>
+![abap-proxy-connection-sxmb_adm-integration-engine-configuration-engine-type-is_url-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836608-fd712380-f3b2-11ea-9ef7-9e014896fd1d.png)
 
-	Configurações para os parâmetros IS_URL ',' HTTP_TIMEOUT 'e' ENGINE_TYPE 'do Integration Engine.
+Configurações para os parâmetros IS_URL ',' HTTP_TIMEOUT 'e' ENGINE_TYPE 'do Integration Engine.
 
-	O nome do destino após os caracteres dest: // é o destino RFC que criamos no Passo 1.
+O nome do destino após os caracteres dest: // é o destino RFC que criamos no Passo 1.
 
 
 ### Passo 5 - Configurar dados de acesso SLD via SLDAPICUST.
 	
-	Acesse a transação SLDAPICUST e inclua o nome do destino HTTP SLD como Nome alternativo SAP_CONFIG . Certifique-se de selecionar as opções Acesso ao servidor SLD usando HTTP e Conectar usando destino HTTP .
+Acesse a transação SLDAPICUST e inclua o nome do destino HTTP SLD como Nome alternativo SAP_CONFIG . Certifique-se de selecionar as opções Acesso ao servidor SLD usando HTTP e Conectar usando destino HTTP .
 
-	Estas são as configurações recomendadas. Mas você também pode configurar diretamente o URL SLD sem destino HTTP.
+Estas são as configurações recomendadas. Mas você também pode configurar diretamente o URL SLD sem destino HTTP.
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92836778-2beefe80-f3b3-11ea-9062-c88f458a43db.png)"/>
+![proxy-setting-sldapicust-http-destination-sld-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836778-2beefe80-f3b3-11ea-9062-c88f458a43db.png)
 
-	Configurações de SLDAPICUST para alias SAP_CONFIG.
+Configurações de SLDAPICUST para alias SAP_CONFIG.
 
 
 ### Passo 6 - Criar destino HTTP no administrador do Net-weaver (NWA).
 
-	Nesta etapa, criaremos um Destino HTTP para o servidor de integração de back-end SAP a partir do PI / PO NWA.
+Nesta etapa, criaremos um Destino HTTP para o servidor de integração de back-end SAP a partir do PI / PO NWA.
 
-	Vá para NWA> Configuração> Infraestrutura> Destinos e crie um destino HTTP para o Netweaver Integration Engine.
+Vá para NWA> Configuração> Infraestrutura> Destinos e crie um destino HTTP para o Netweaver Integration Engine.
 	
-<img src="(https://user-images.githubusercontent.com/39013639/92836895-50e37180-f3b3-11ea-8891-e4e71f518196.png)"/>
+![proxy-settings-http-destination-nwa-sap-pi-po-1](https://user-images.githubusercontent.com/39013639/92836895-50e37180-f3b3-11ea-8891-e4e71f518196.png)
 
-	NWA> Configuração> Infraestrutura> Destinos.
-	
-	
-	Crie um novo destino usando o assistente de criação de novo destino.
+NWA> Configuração> Infraestrutura> Destinos.
 
-<img src="(https://user-images.githubusercontent.com/39013639/92836978-68225f00-f3b3-11ea-8830-3f102f1c8f0b.png)"/>
 
-	Escolha Criar novo destino em NWA.
-	
-	
-	Normalmente, o nome do destino é definido como <SAP System ID> CLNT <Client Number> _HTTP. Neste exemplo, o nome do destino é SADCLNT100_HTTP. O tipo de destino é HTTP.
+Crie um novo destino usando o assistente de criação de novo destino.
 
-<img src="(https://user-images.githubusercontent.com/39013639/92837105-89834b00-f3b3-11ea-865a-751a519dbcaf.png)"/>
+![proxy-configuration-http-new-destination-nwa-sap-pi-po](https://user-images.githubusercontent.com/39013639/92836978-68225f00-f3b3-11ea-8830-3f102f1c8f0b.png)
 
-	Configure o destino por meio do assistente.
+Escolha Criar novo destino em NWA.
 
-	
-	Na próxima tela, defina os detalhes de Conexão e Transporte. Parâmetros de URL, ID do sistema, cliente e idioma são obrigatórios.
-	
-	O ID do sistema é o ID do sistema SAP (SAD neste exemplo). E o cliente é 900.
 
-<img src="(https://user-images.githubusercontent.com/39013639/92837218-b33c7200-f3b3-11ea-904f-120c1cce6364.png)"/>
+Normalmente, o nome do destino é definido como <SAP System ID> CLNT <Client Number> _HTTP. Neste exemplo, o nome do destino é SADCLNT100_HTTP. O tipo de destino é HTTP.
 
-	Detalhes de conexão e transporte. Parâmetros de URL, ID do sistema, cliente e idioma.
-	
-	
-	Para encontrar o URL, vá para a transação SICF (back-end SAP) e selecione 'Executar'. A árvore de serviço será exibida no resultado. Expanda o host padrão da árvore de serviço e navegue para
-	default_host> sap> iwbep ou default_host> sap> xi> engine.
+![proxy-setting-create-http-destination-nwa-wizard-general-data-sap-pi-po-2](https://user-images.githubusercontent.com/39013639/92837105-89834b00-f3b3-11ea-865a-751a519dbcaf.png)
 
-	
-	O próximo passo é definir os dados de logon. Neste exemplo, usarei o método de autenticação básica com nome de usuário e senha.
+Configure o destino por meio do assistente.
 
-<img src="(https://user-images.githubusercontent.com/39013639/92837366-dd8e2f80-f3b3-11ea-95f8-ca990de4bea5.png)"/>
+
+Na próxima tela, defina os detalhes de Conexão e Transporte. Parâmetros de URL, ID do sistema, cliente e idioma são obrigatórios.
+
+O ID do sistema é o ID do sistema SAP (SAD neste exemplo). E o cliente é 900.
+
+![proxy-configuration-http-destination-url-sap-system-dettail-new-wizard-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837218-b33c7200-f3b3-11ea-904f-120c1cce6364.png)
+
+Detalhes de conexão e transporte. Parâmetros de URL, ID do sistema, cliente e idioma.
+
+
+Para encontrar o URL, vá para a transação SICF (back-end SAP) e selecione 'Executar'. A árvore de serviço será exibida no resultado. Expanda o host padrão da árvore de serviço e navegue para
+default_host> sap> iwbep ou default_host> sap> xi> engine.
+
+
+O próximo passo é definir os dados de logon. Neste exemplo, usarei o método de autenticação básica com nome de usuário e senha.
+
+![proxy-setting-http-destination-basic-authentication-username-password-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837366-dd8e2f80-f3b3-11ea-95f8-ca990de4bea5.png)
 	
-	Este destino HTTP será reutilizado no Canal de Comunicação do Receptor SOAP no passo 7.
+Este destino HTTP será reutilizado no Canal de Comunicação do Receptor SOAP no passo 7.
 	
 ### Passo 7 - Criar Canal de Comunicação SOAP (HTTP) Remetente e Receptor.
 	
-	Por fim, crie os canais de comunicação proxy do remetente e receptor no SAP PI/PO no SAP Business System.
-	
-	Canal de comunicação do remetente SOAP.
+Por fim, crie os canais de comunicação proxy do remetente e receptor no SAP PI/PO no SAP Business System.
 
-	![proxy-sender-communication-channel-configuration-setting-sap-pi-po-1](https://user-images.githubusercontent.com/39013639/92837498-0b737400-f3b4-11ea-9ed2-a562baa40bc7.png)
-	Configuração do canal de comunicação do remetente proxy (SOAP).
+Canal de comunicação do remetente SOAP.
 
-	
-	Canal de comunicação do receptor SOAP.
-	![proxy-Receiver-communication-channel-settings-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837623-2f36ba00-f3b4-11ea-84d9-d3931ae947b2.png)
-	Canal de comunicação do receptor proxy (SOAP).
+![proxy-sender-communication-channel-configuration-setting-sap-pi-po-1](https://user-images.githubusercontent.com/39013639/92837498-0b737400-f3b4-11ea-9ed2-a562baa40bc7.png)
+Configuração do canal de comunicação do remetente proxy (SOAP).
 
-	Use o tipo de endereço "HTTP Destination" e atribua o nome do destino HTTP que criamos no passo 6.
+
+Canal de comunicação do receptor SOAP.
+![proxy-Receiver-communication-channel-settings-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837623-2f36ba00-f3b4-11ea-84d9-d3931ae947b2.png)
+Canal de comunicação do receptor proxy (SOAP).
+
+Use o tipo de endereço "HTTP Destination" e atribua o nome do destino HTTP que criamos no passo 6.
 
 ### Como testar a conectividade do proxy.
 
-	Existem várias maneiras de verificar se as configurações de proxy estão definidas em SEIVAsistema back-end e sistema de orquestração de processos. Se você já tem uma interface Proxy de ponta a ponta desenvolvida, use essas técnicas de depuração para analisar o comportamento em tempo de execução.
+Existem várias maneiras de verificar se as configurações de proxy estão definidas em SEIVAsistema back-end e sistema de orquestração de processos. Se você já tem uma interface Proxy de ponta a ponta desenvolvida, use essas técnicas de depuração para analisar o comportamento em tempo de execução.
 
 ### Verifique se os destinos RFC e HTTP estão funcionando bem.
 
-	Usando a transação SM59 e o Teste de Conexão, verifique se os Destinos RFC estão funcionando conforme o esperado. Repita essa etapa para todos os destinos RFC que criamos nas etapas anteriores.
+Usando a transação SM59 e o Teste de Conexão, verifique se os Destinos RFC estão funcionando conforme o esperado. Repita essa etapa para todos os destinos RFC que criamos nas etapas anteriores.
 
-	![proxy-rfc-connection-test-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837868-7755dc80-f3b4-11ea-9de0-a2217c13a8a4.png)
-	Teste os destinos RFC usando a transação SM59.
+![proxy-rfc-connection-test-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837868-7755dc80-f3b4-11ea-9de0-a2217c13a8a4.png)
+Teste os destinos RFC usando a transação SM59.
 
 ### Teste o status SLD com a transação SLDCHECK.
 
-	Execute a transação SLDCHECK para certificar-se de que as etapas de configuração do SLD foram executadas corretamente. Escolha Permitir na janela pop-up.
+Execute a transação SLDCHECK para certificar-se de que as etapas de configuração do SLD foram executadas corretamente. Escolha Permitir na janela pop-up.
 
-	![proxy-configuration-sldcheck-transaction-successful-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837976-9b192280-f3b4-11ea-8b79-7afb81ef7078.png)
-	Simplesmente execute a transação SLDCHECK.
-	
-	Você deve receber uma resposta positiva de SLDCHECK se a configuração necessária for executada corretamente.
+![proxy-configuration-sldcheck-transaction-successful-sap-pi-po](https://user-images.githubusercontent.com/39013639/92837976-9b192280-f3b4-11ea-8b79-7afb81ef7078.png)
+Simplesmente execute a transação SLDCHECK.
+
+Você deve receber uma resposta positiva de SLDCHECK se a configuração necessária for executada corretamente.
 
 ### Teste a conexão ESR com SPROX_CHECK_IFR_RESPONSE.
 
-	Execute o programa por meio da transação SE38 para testar o status da Conexão ESR.
+Execute o programa por meio da transação SE38 para testar o status da Conexão ESR.
 
-	![proxy-esr-test-SPROX_CHECK_IFR_RESPONSE-sap-se38-pi-po](https://user-images.githubusercontent.com/39013639/92838110-c6037680-f3b4-11ea-9461-ecc77a86b0fa.png)
-	Teste a conectividade ESR usando o programa SPROX_CHECK_IFR_RESPONSE
-	
-	
-	![proxy-esr-test-SPROX_CHECK_IFR_RESPONSE-response-succesful-pi-po](https://user-images.githubusercontent.com/39013639/92838169-d9164680-f3b4-11ea-8183-ab4bbd329bab.png)
-	Conexão ESR bem-sucedida.
+![proxy-esr-test-SPROX_CHECK_IFR_RESPONSE-sap-se38-pi-po](https://user-images.githubusercontent.com/39013639/92838110-c6037680-f3b4-11ea-9461-ecc77a86b0fa.png)
+Teste a conectividade ESR usando o programa SPROX_CHECK_IFR_RESPONSE
+
+
+![proxy-esr-test-SPROX_CHECK_IFR_RESPONSE-response-succesful-pi-po](https://user-images.githubusercontent.com/39013639/92838169-d9164680-f3b4-11ea-8183-ab4bbd329bab.png)
+Conexão ESR bem-sucedida.
 
 ### Verifique os objetos proxy por meio da transação SPROXY.
 
-	Verifique se o SPROXY mostra os componentes de software (SWCVs) e os objetos proxy incluídos nos namespaces.
+Verifique se o SPROXY mostra os componentes de software (SWCVs) e os objetos proxy incluídos nos namespaces.
 
-	![test-proxy-configuration-transaction-sproxy-sap-pi-po](https://user-images.githubusercontent.com/39013639/92838298-fc40f600-f3b4-11ea-9e2e-85d1217d3672.png)
-	Verifique se você pode visualizar os SWCVs do ESR na transação SPROXY.
+![test-proxy-configuration-transaction-sproxy-sap-pi-po](https://user-images.githubusercontent.com/39013639/92838298-fc40f600-f3b4-11ea-9e2e-85d1217d3672.png)
+Verifique se você pode visualizar os SWCVs do ESR na transação SPROXY.
 	
 ### Teste os canais de comunicação por meio do Runtime Monitor.
 
-	Acesse Configuration Monitoring Home> Adapter Engine> Communication Channel Monitor e execute ping nos canais de comunicação do emissor e receptor.
-	
-	![proxy-connection-test-receiver-communication-channel-ping-adpter-engine-monitor-sap-pi-po-1024x295](https://user-images.githubusercontent.com/39013639/92838432-285c7700-f3b5-11ea-8c28-c31557d8d9d7.png)
-	Fazer ping nos canais de comunicação por meio do monitor do adaptador.
+Acesse Configuration Monitoring Home> Adapter Engine> Communication Channel Monitor e execute ping nos canais de comunicação do emissor e receptor.
+
+![proxy-connection-test-receiver-communication-channel-ping-adpter-engine-monitor-sap-pi-po-1024x295](https://user-images.githubusercontent.com/39013639/92838432-285c7700-f3b5-11ea-8c28-c31557d8d9d7.png)
+Fazer ping nos canais de comunicação por meio do monitor do adaptador.
 	
 
 ### Transações ABAP PI  
