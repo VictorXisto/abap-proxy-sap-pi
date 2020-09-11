@@ -41,13 +41,13 @@
 * [Eclipse PI Tools](#Eclipse-PI-Tools)
 * [Central Message Monitor](#Central-Message-Monitor)
 * [Administrador NetWeaver (NWA)](#Administrador-NetWeaver-(NWA))
-* [Conectividade: Proxy Framework e Adapter Framework](#Conectividade:-Proxy-Framework-e-Adapter-Framework)
+* [Conectividade: Proxy Framework e Adapter Framework](#Conectividade-:-Proxy-Framework-e-Adapter-Framework)
 * [Estrutura do adaptador](#Estrutura-do-adaptador)
 * [Como funciona a estrutura do adaptador?](#Como-funciona-a-estrutura-do-adaptador?)
 * [Como desenvolver interfaces em SAP PI (PO)](#Como-desenvolver-interfaces-em-SAP-PI-(PO))
-	* [Etapa 1 - System Landscape Directory (SLD)](#Etapa-1:-System-Landscape-Directory-(SLD))
-	* [Etapa 2 - Enterprise Service Repository (ESR)](#Etapa-2:-Enterprise-Service-Repository-(ESR))
-	* [Etapa 3 - Diretório de integração (ID)](#Etapa-3:-Diretório-de-integração-(ID))
+	* [Etapa 1 - System Landscape Directory SLD](#Etapa-1-:-System-Landscape-Directory-(SLD))
+	* [Etapa 2 - Enterprise Service Repository (ESR)](#Etapa-2-:-Enterprise-Service-Repository-(ESR))
+	* [Etapa 3 - Diretório de integração (ID)](#Etapa-3-:-Diretório-de-integração-(ID))
 * [Ambientes de desenvolvimento integrado (IDE) do SAP PI / PO](#Ambientes-de-desenvolvimento-integrado-(IDE)-do-SAP-PI-/-PO)
 * [Clientes Java Swing](#Clientes-Java-Swing)
 * [Programa de mapeamento gráfico de mensagens no ESB](#Programa-de-mapeamento-gráfico-de-mensagens-no-ESB)
@@ -65,13 +65,12 @@
 * [Visão geral do pipeline de processamento de mensagens de AAX](#Visão-geral-do-pipeline-de-processamento-de-mensagens-de-AAX)
 * [Remoção de pilha ABAP](#Remoção-de-pilha-ABAP)
 * [Cloud Integration Runtime incluído no SAP PO local](#Cloud-Integration-Runtime-incluído-no-SAP-PO-local)
-* [Complemento de B2B para integração de EDI de B2B em vez de adaptador Seeburger(#Complemento-de-B2B-para-integração-de-EDI-de-B2B-em-vez-de-adaptador-Seeburger)
 * [Guia completo de configuração de proxy para SAP PI/PO e ECC](#Guia-completo-de-configuração-de-proxy-para-SAP-PI/PO-e-ECC)
 * [Versões SAP usadas](#Versões-SAP-usadas)
 * [Pré-requisitos para configurar a conectividade do proxy](#Pré-requisitos-para-configurar-a-conectividade-do-proxy)
-	* [Pré-requisito 1: Sistema SAP registrado no System Landscape Directory (SLD)](#Pré-requisito-1-:-Sistema-SAP-registrado-no-System-Landscape-Directory-(SLD))
-	* [Pré-requisito 2: os destinos SLD RFC são criados](#Pré-requisito-2-:-os-destinos-SLD-RFC-são-criados)
-	* [Pré-requisito 3: A configuração SICF é concluída pela equipe do BASIS](#Pré-requisito-3-:-A-configuração-SICF-é-concluída-pela-equipe-do-BASIS)
+	* [Requisito 1: Sistema SAP registrado no System Landscape Directory (SLD)](#Requisito-1-:-Sistema-SAP-registrado-no-System-Landscape-Directory-(SLD))
+	* [Requisito 2: os destinos SLD RFC são criados](#Requisito-2-:-os-destinos-SLD-RFC-são-criados)
+	* [Requisito 3: A configuração SICF é concluída pela equipe do BASIS](#Requisito-3-:-A-configuração-SICF-é-concluída-pela-equipe-do-BASIS)
 * [Exemplo de configuração de proxy](#Exemplo-de-configuração-de-proxy)
 * [Etapas para configurar a comunicação de proxy entre o back-end SAP ECC e PI/PO](#Etapas-para-configurar-a-comunicação-de-proxy-entre-o-back-end-SAP-ECC-e-PI/PO)
 	* [Passo 1 - Criar destino para Advanced Adapter Engine (AAE) no SM59](#Passo-1---Criar-destino-para-Advanced-Adapter-Engine-(AAE)-no-SM59)
@@ -570,11 +569,11 @@
     
 	3 - A configuração do SICF é concluída pela equipe do BASIS.
 	
-### Pré-requisito 1: Sistema SAP registrado no System Landscape Directory (SLD).
+### Requisito 1: Sistema SAP registrado no System Landscape Directory (SLD).
 
 	Certifique-se de ter registrado o sistema ECC back-end SAP no System Landscape Directory (SLD) . O sistema de negócios do sistema SAP deve ser criado e importado para o diretório de integração. O nome do SAP Business System neste exemplo é SADCLNT900 .
 
-### Pré-requisito 2: os destinos SLD RFC são criados.
+### Requisito 2: os destinos SLD RFC são criados.
 
 	Ao registrar o sistema técnico SAP no System Landscape Directory (SLD), os destinos RFC para SLD são criados automaticamente. Os nomes de destinos RFC gerados automaticamente são SLD_NUC e SLD_UC . Certifique-se de que esses dois destinos RFC estejam disponíveis no sistema back-end SAP e funcionando.
 
@@ -584,7 +583,7 @@
 	
 	Destinos SLD_UNC e SLD_UC TCP/IP RFC gerados automaticamente.
 	
-### Pré-requisito 3: A configuração SICF é concluída pela equipe do BASIS.
+### Requisito 3: A configuração SICF é concluída pela equipe do BASIS.
 	
 	Certifique-se de que os Serviços estejam registrados no SICF pela equipe BASIS.
 
