@@ -12,14 +12,14 @@
 # 🔎 Tópicos 
 	
 <!--ts-->
-	*[O que é SAP PI/PO?] (#o-que-é-sap-pi-/-po-?)
-	* [Funcionalidades do SAP PI/PO] (#funcionalidades-do-sap-pi-/-po)
-	* [SAP PI conecta diferentes plataformas como] (#sap-pi-conecta-diferentes-plataformas-como)
-	* [Principais funções do SAP PI] (#principais-funções-do-sap-pi)
-	* [Como funciona SAP PI] (#como-funciona-sap-pi)
-	* [Evolução das versões SAP XI, PI e PO] (#evolução-das-versões-sap-xi-,-pi-e-po)
-	* [Exchange Infrastructure (XI)] (#exchange-infrastructure-(XI))
-	* [Process Integration (PI)] (#process-integration-(PI))
+	* [O que é SAP PI/PO?](#o-que-é-sap-pi-/-po-?)
+	* [Funcionalidades do SAP PI/PO](#funcionalidades-do-sap-pi-/-po)
+	* [SAP PI conecta diferentes plataformas como](#sap-pi-conecta-diferentes-plataformas-como)
+	* [Principais funções do SAP PI](#principais-funções-do-sap-pi)
+	* [Como funciona SAP PI](#como-funciona-sap-pi)
+	* [Evolução das versões SAP XI, PI e PO](#evolução-das-versões-sap-xi-,-pi-e-po)
+	* [Exchange Infrastructure (XI)](#exchange-infrastructure-(XI))
+	* [Process Integration (PI)](#process-integration-(PI))
 	* [Process Orchestration (PO)]
 	* [Cloud Platform (CPI) e HANA Cloud Platform Integration (HCI)]
 	* [Vantagens do SAP PI/PO sobre outros middleware não SAP]
