@@ -12,7 +12,7 @@
 # 🔎 Tópicos 
 	
 <!--ts-->
-	* [O que é SAP PI/PO?] (#o-que-é-sap-pi-/-po-?)
+	*[O que é SAP PI/PO?] (#o-que-é-sap-pi-/-po-?)
 	* [Funcionalidades do SAP PI/PO] (#funcionalidades-do-sap-pi-/-po)
 	* [SAP PI conecta diferentes plataformas como] (#sap-pi-conecta-diferentes-plataformas-como)
 	* [Principais funções do SAP PI] (#principais-funções-do-sap-pi)
